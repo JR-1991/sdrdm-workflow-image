@@ -54,7 +54,7 @@ async def do_something(body: ServiceTemplate):
     
     result = entrypoint.main(dataset)
     
-    return result.dict()
+    return result.to_dict()
 
 @lru_cache(CACHE_SIZE)
 def _fetch_from_git(url):
